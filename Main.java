@@ -1,6 +1,3 @@
-import java.io.IOException;
-import java.sql.SQLOutput;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
