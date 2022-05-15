@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int [] sostoyanieArray = new int [30];
     public static int sostoyanie;
-    public static String[] lenta = new String[500];
+    public static String[] lenta = new String[150];
     public static int index=4;
 
     public static void main(String[] args)
     {
+        //PART1
+        System.out.println("PART 1");
         for (int i=0;i<lenta.length;i++)
         {
             lenta[i]="_";
@@ -16,37 +17,56 @@ public class Main {
         sostoyanie=1;
         int check=1;
         int step=1;
+
         while (check==1) {
             print_LENTA();
             print_sostoyanie();
             switch (sostoyanie) {
-                case 0:
-                    check=0;
-                    break;
-                case 1:
-                    sostoyanie1();
-                    break;
-                case 2:
-                    sostoyanie2();
-                    break;
-                case 3:
-                    sostoyanie3();
-                    break;
-                case 4:
-                    sostoyanie4();
-                    break;
-                case 5:
-                    sostoyanie5();
-                    break;
-                case 6:
-                    sostoyanie6();
-                    break;
-                default:
-                    break;
+                case 0 -> check = 0;
+                case 1 -> sostoyanie1();
+                case 2 -> sostoyanie2();
+                case 3 -> sostoyanie3();
+                case 4 -> sostoyanie4();
+                case 5 -> sostoyanie5();
+                case 6 -> sostoyanie6();
+                default -> {
+                }
             }
             step++;
         }
         System.out.println("\nResult poluchen za "+step+" shagov");
+
+
+        //PART 2
+        for (int i=0;i<lenta.length;i++)
+        {
+            lenta[i]="_";
+        }
+        sostoyanie=1;
+        check=1;
+        step=1;
+        System.out.println("PART 1");
+        input();
+        while (check==1) {
+            print_LENTA();
+            print_sostoyanie();
+            switch (sostoyanie) {
+                case 0 -> check = 0;
+                case 1 -> sostoyanie1();
+                case 2 -> sostoyanie2_2();
+                case 3 -> sostoyanie2_3();
+                case 4 -> sostoyanie2_4();
+                case 5 -> sostoyanie2_5();
+                case 6 -> sostoyanie2_6();
+                case 7 -> sostoyanie2_7();
+                default -> {
+                }
+            }
+            step++;
+        }
+
+
+
     }
     public static void sostoyanie1()
     {
@@ -129,6 +149,81 @@ public class Main {
             sostoyanie=0;
         }
     }
+
+    public static void sostoyanie2_2()
+    {
+        if (lenta[index]=="1")
+        {
+            lenta[index]="1";
+            sostoyanie=3;
+            index++;
+        }
+        else if (lenta[index]=="A") {
+            lenta[index] = "A";
+            sostoyanie = 4;
+            index++;
+        }
+    }
+    public static void sostoyanie2_3()
+    {
+        if (lenta[index]=="1")
+        {
+            lenta[index]="1";
+            sostoyanie=2;
+            index++;
+        }
+        else if (lenta[index]=="A") {
+            lenta[index] = "A";
+            sostoyanie = 5;
+            index++;
+        }
+    }
+    public static void sostoyanie2_4()
+    {
+        if (lenta[index]=="1")
+        {
+            lenta[index]="A";
+            sostoyanie=4;
+            index++;
+        }
+        else if (lenta[index]=="A")
+        {
+            lenta[index]="A";
+            sostoyanie=6;
+            index++;
+        }
+        else if (lenta[index]=="_")
+        {
+            sostoyanie=7;
+            index++;
+        }
+    }
+    public static void sostoyanie2_5()
+    {
+        if (lenta[index]=="1")
+        {
+            lenta[index]="A";
+            sostoyanie=5;
+            index++;
+        }
+        else if (lenta[index]=="_")
+        {
+            sostoyanie=6;
+            index++;
+        }
+    }
+    public static void sostoyanie2_6()
+    {
+        lenta[index]="0";
+        sostoyanie=0;
+    }
+    public static void sostoyanie2_7()
+    {
+        lenta[index]="1";
+        sostoyanie=0;
+    }
+
+
     public static void input()
     {
         lenta[index-1]="A";

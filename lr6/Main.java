@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static int [] sostoyanieArray = new int [30];
     public static int sostoyanie;
-    public static String[] lenta = new String[500];
+    public static String[] lenta = new String[150];
     public static int index=4;
 
     public static void main(String[] args)
