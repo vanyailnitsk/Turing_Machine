@@ -256,7 +256,7 @@ public class Main {
         {
             System.out.print("Type number1: ");
             a=in.nextInt();
-            System.out.print("Type number2:  ");
+            System.out.print("Type number2: ");
             b=in.nextInt();
             if (a>=0&&a<10&&b>=0&&b<10)
             {
@@ -269,9 +269,9 @@ public class Main {
 
         }
 
-        lenta[index]=Integer.toString(a);
+        lenta[index]=Integer.toString(b);
         lenta[index-1]="-";
-        lenta[index-2]=Integer.toString(b);
+        lenta[index-2]=Integer.toString(a);
 
     }
     public static void print_LENTA()
