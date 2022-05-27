@@ -22,15 +22,29 @@ public class Main {
             print_LENTA();
             print_sostoyanie();
             switch (sostoyanie) {
-                case 0 -> check = 0;
-                case 1 -> sostoyanie1();
-                case 2 -> sostoyanie2();
-                case 3 -> sostoyanie3();
-                case 4 -> sostoyanie4();
-                case 5 -> sostoyanie5();
-                case 6 -> sostoyanie6();
-                default -> {
-                }
+                case 0:
+                    check = 0;
+                    break;
+                case 1:
+                    sostoyanie1();
+                    break;
+                case 2:
+                    sostoyanie2();
+                    break;
+                case 3:
+                    sostoyanie3();
+                    break;
+                case 4:
+                    sostoyanie4();
+                    break;
+                case 5:
+                    sostoyanie5();
+                    break;
+                case 6:
+                    sostoyanie6();
+                    break;
+                default:
+                    break;
             }
             step++;
         }
@@ -51,16 +65,32 @@ public class Main {
             print_LENTA();
             print_sostoyanie();
             switch (sostoyanie) {
-                case 0 -> check = 0;
-                case 1 -> sostoyanie1();
-                case 2 -> sostoyanie2_2();
-                case 3 -> sostoyanie2_3();
-                case 4 -> sostoyanie2_4();
-                case 5 -> sostoyanie2_5();
-                case 6 -> sostoyanie2_6();
-                case 7 -> sostoyanie2_7();
-                default -> {
-                }
+                case 0:
+                    check = 0;
+                    break;
+                case 1:
+                    sostoyanie1();
+                    break;
+                case 2:
+                    sostoyanie2_2();
+                    break;
+                case 3:
+                    sostoyanie2_3();
+                    break;
+                case 4:
+                    sostoyanie2_4();
+                    break;
+                case 5:
+                    sostoyanie2_5();
+                    break;
+                case 6:
+                    sostoyanie2_6();
+                    break;
+                case 7:
+                    sostoyanie2_7();
+                    break;
+                default:
+                    break;
             }
             step++;
         }
